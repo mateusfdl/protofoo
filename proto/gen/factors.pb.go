@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.28.1
 // 	protoc        v3.21.12
-// source: primefactor.proto
+// source: factors.proto
 
-package primefactor
+package factors
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -31,7 +31,7 @@ type FactorRequest struct {
 func (x *FactorRequest) Reset() {
 	*x = FactorRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_primefactor_proto_msgTypes[0]
+		mi := &file_factors_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -44,7 +44,7 @@ func (x *FactorRequest) String() string {
 func (*FactorRequest) ProtoMessage() {}
 
 func (x *FactorRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_primefactor_proto_msgTypes[0]
+	mi := &file_factors_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -57,7 +57,7 @@ func (x *FactorRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FactorRequest.ProtoReflect.Descriptor instead.
 func (*FactorRequest) Descriptor() ([]byte, []int) {
-	return file_primefactor_proto_rawDescGZIP(), []int{0}
+	return file_factors_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *FactorRequest) GetNumber() int64 {
@@ -78,7 +78,7 @@ type FactorResponse struct {
 func (x *FactorResponse) Reset() {
 	*x = FactorResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_primefactor_proto_msgTypes[1]
+		mi := &file_factors_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -91,7 +91,7 @@ func (x *FactorResponse) String() string {
 func (*FactorResponse) ProtoMessage() {}
 
 func (x *FactorResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_primefactor_proto_msgTypes[1]
+	mi := &file_factors_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -104,7 +104,7 @@ func (x *FactorResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FactorResponse.ProtoReflect.Descriptor instead.
 func (*FactorResponse) Descriptor() ([]byte, []int) {
-	return file_primefactor_proto_rawDescGZIP(), []int{1}
+	return file_factors_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *FactorResponse) GetResult() int64 {
@@ -114,44 +114,45 @@ func (x *FactorResponse) GetResult() int64 {
 	return 0
 }
 
-var File_primefactor_proto protoreflect.FileDescriptor
+var File_factors_proto protoreflect.FileDescriptor
 
-var file_primefactor_proto_rawDesc = []byte{
-	0x0a, 0x11, 0x70, 0x72, 0x69, 0x6d, 0x65, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x22, 0x27, 0x0a, 0x0d, 0x46, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x22, 0x28, 0x0a, 0x0e,
-	0x46, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16,
-	0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06,
-	0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0x41, 0x0a, 0x0b, 0x50, 0x72, 0x69, 0x6d, 0x65, 0x46,
-	0x61, 0x63, 0x74, 0x6f, 0x72, 0x12, 0x32, 0x0a, 0x09, 0x46, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x7a, 0x65, 0x12, 0x0e, 0x2e, 0x46, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x0f, 0x2e, 0x46, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x22, 0x00, 0x28, 0x01, 0x30, 0x01, 0x42, 0x0f, 0x5a, 0x0d, 0x2e, 0x2f, 0x70,
-	0x72, 0x69, 0x6d, 0x65, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+var file_factors_proto_rawDesc = []byte{
+	0x0a, 0x0d, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
+	0x07, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x73, 0x22, 0x27, 0x0a, 0x0d, 0x46, 0x61, 0x63, 0x74,
+	0x6f, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x6e, 0x75, 0x6d,
+	0x62, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65,
+	0x72, 0x22, 0x28, 0x0a, 0x0e, 0x46, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x03, 0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0x4d, 0x0a, 0x07, 0x46,
+	0x61, 0x63, 0x74, 0x6f, 0x72, 0x73, 0x12, 0x42, 0x0a, 0x09, 0x46, 0x61, 0x63, 0x74, 0x6f, 0x72,
+	0x69, 0x7a, 0x65, 0x12, 0x16, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x73, 0x2e, 0x46, 0x61,
+	0x63, 0x74, 0x6f, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x66, 0x61,
+	0x63, 0x74, 0x6f, 0x72, 0x73, 0x2e, 0x46, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x28, 0x01, 0x30, 0x01, 0x42, 0x10, 0x5a, 0x0e, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x73, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_primefactor_proto_rawDescOnce sync.Once
-	file_primefactor_proto_rawDescData = file_primefactor_proto_rawDesc
+	file_factors_proto_rawDescOnce sync.Once
+	file_factors_proto_rawDescData = file_factors_proto_rawDesc
 )
 
-func file_primefactor_proto_rawDescGZIP() []byte {
-	file_primefactor_proto_rawDescOnce.Do(func() {
-		file_primefactor_proto_rawDescData = protoimpl.X.CompressGZIP(file_primefactor_proto_rawDescData)
+func file_factors_proto_rawDescGZIP() []byte {
+	file_factors_proto_rawDescOnce.Do(func() {
+		file_factors_proto_rawDescData = protoimpl.X.CompressGZIP(file_factors_proto_rawDescData)
 	})
-	return file_primefactor_proto_rawDescData
+	return file_factors_proto_rawDescData
 }
 
-var file_primefactor_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_primefactor_proto_goTypes = []interface{}{
-	(*FactorRequest)(nil),  // 0: FactorRequest
-	(*FactorResponse)(nil), // 1: FactorResponse
+var file_factors_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_factors_proto_goTypes = []interface{}{
+	(*FactorRequest)(nil),  // 0: factors.FactorRequest
+	(*FactorResponse)(nil), // 1: factors.FactorResponse
 }
-var file_primefactor_proto_depIdxs = []int32{
-	0, // 0: PrimeFactor.Factorize:input_type -> FactorRequest
-	1, // 1: PrimeFactor.Factorize:output_type -> FactorResponse
+var file_factors_proto_depIdxs = []int32{
+	0, // 0: factors.Factors.Factorize:input_type -> factors.FactorRequest
+	1, // 1: factors.Factors.Factorize:output_type -> factors.FactorResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -159,13 +160,13 @@ var file_primefactor_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_primefactor_proto_init() }
-func file_primefactor_proto_init() {
-	if File_primefactor_proto != nil {
+func init() { file_factors_proto_init() }
+func file_factors_proto_init() {
+	if File_factors_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_primefactor_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_factors_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FactorRequest); i {
 			case 0:
 				return &v.state
@@ -177,7 +178,7 @@ func file_primefactor_proto_init() {
 				return nil
 			}
 		}
-		file_primefactor_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_factors_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FactorResponse); i {
 			case 0:
 				return &v.state
@@ -194,18 +195,18 @@ func file_primefactor_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_primefactor_proto_rawDesc,
+			RawDescriptor: file_factors_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_primefactor_proto_goTypes,
-		DependencyIndexes: file_primefactor_proto_depIdxs,
-		MessageInfos:      file_primefactor_proto_msgTypes,
+		GoTypes:           file_factors_proto_goTypes,
+		DependencyIndexes: file_factors_proto_depIdxs,
+		MessageInfos:      file_factors_proto_msgTypes,
 	}.Build()
-	File_primefactor_proto = out.File
-	file_primefactor_proto_rawDesc = nil
-	file_primefactor_proto_goTypes = nil
-	file_primefactor_proto_depIdxs = nil
+	File_factors_proto = out.File
+	file_factors_proto_rawDesc = nil
+	file_factors_proto_goTypes = nil
+	file_factors_proto_depIdxs = nil
 }

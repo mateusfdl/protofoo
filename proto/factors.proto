@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package = ".proto/factors";
+
+package factors;
+
+service Factors {
+    rpc Factorize (stream FactorRequest) returns (stream FactorResponse) {}
+}
+
+message FactorRequest {
+    int64 number = 1;
+}
+
+message FactorResponse {
+    int64 result = 1;
+}
