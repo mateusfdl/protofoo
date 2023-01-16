@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = ".proto/factors";
+option go_package = "github.com/mateusfdl/protofoo/proto";
 
 package factors;
 
